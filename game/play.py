@@ -63,5 +63,7 @@ class TTTBoard(object):
             return True
 
     def __unicodeToStr(self, unicode_var):
+        if unicode_var is None:
+            raise ValueError('Current board not specified')
         return str(unicode_var)
 
